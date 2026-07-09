@@ -20,7 +20,7 @@ function getCurrentCommitSHA() {
 
 process.env.PUBLIC_VERSION ??= process.env.npm_package_version;
 process.env.PUBLIC_COMMIT_SHA ??= getCurrentCommitSHA();
-process.env.PUBLIC_APP_ASSETS ??= "chatui";
+process.env.PUBLIC_APP_ASSETS ??= "trip-chat-ai-robot";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -29,11 +29,11 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: useStatic ? adapterStatic({ fallback: "index.html", strict: false }) : adapterNode(),
+		adapter: useStatic ? adapterStatic({ fallback: "index.html", strict: true }) : adapterNode(),
 
 		paths: {
 			base: process.env.APP_BASE || "",
-			relative: false,
+			relative: true,
 		},
 		csrf: {
 			// handled in hooks.server.ts, because we can have multiple valid origins
