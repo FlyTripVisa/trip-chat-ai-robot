@@ -16,7 +16,7 @@
 		"updateLocalEnv": "vite-node --options.transformMode.ssr='/.*/' scripts/updateLocalEnv.ts",
 		"populate": "vite-node --options.transformMode.ssr='/.*/' scripts/populate.ts",
 		"config": "vite-node --options.transformMode.ssr='/.*/' scripts/config.ts",
-		"prepare": "husky"
+		"prepare": "chatui"
 	},
 	"devDependencies": {
 		"@faker-js/faker": "^8.4.1",
