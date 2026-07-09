@@ -36,7 +36,7 @@ COPY --chown=1000 package-lock.json /app/package-lock.json
 
 RUN chmod +x /app/entrypoint.sh
 
-FROM node:24 AS builder
+FROM node:22 AS builder
 
 WORKDIR /app
 
