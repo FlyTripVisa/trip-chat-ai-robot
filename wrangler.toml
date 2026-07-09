@@ -1,0 +1,8 @@
+name = "flytrip-chat-api"
+compatibility_date = "2026-07-09"
+
+[vars]
+# Environment variables can be overridden here if needed
+
+# Secrets (must be set using `wrangler secret put`)
+# OPENAI_API_KEY
